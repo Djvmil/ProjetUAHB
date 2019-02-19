@@ -11,16 +11,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,HttpModule,FormsModule],
   providers: [
     StatusBar,
     SplashScreen,
-    //Servers, //here
-    //DataSource, //here
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

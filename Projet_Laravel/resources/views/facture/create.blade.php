@@ -25,27 +25,44 @@
           @csrf
           <div class="form-group">
               <label for="mois">Mois:</label>
-              <input type="text" class="form-control" name="mois"/>
+              <select name="mois"  class="form-control" id="abonnement_id">
+                <option value="Janvier"> mois </option>
+                <option value="Janvier"> Janvier </option>
+                <option value="Fevrier"> Fevrier </option>
+                <option value="Mars"> Mars</option>
+                <option value="Mai"> Mai </option>
+                <option value="Juin"> Juin </option>
+                <option value="Juillet"> Juillet</option>
+                <option value="Aout"> Aout </option>
+                <option value="Septembre"> Septembre </option>
+                <option value="Octobre"> Octobre</option>
+                <option value="Novembre"> Novembre </option>
+                <option value="Decembre"> Decembre </option>
+              </select>
+
           </div>
 
           <div class="form-group">
+          </div>
+
+          <!--div class="form-group">
               <label for="consommation">Consommation:</label>
               <input type="text" class="form-control" name="consommation"/>
           </div>
 
           <div class="form-group">
               <label for="prix">Prix:</label>
-              <input type="text" class="form-control" name="prix"/>
+              <input type="text" class="form-control" name="prix"/-->
           </div>
           <div class="form-group">
               <label for="reglement">Réglement:</label>
 
 
             <!--<input type="text" class="form-control" name="reglement"/>-->
-
-             <input type="checkbox"  value="1" name="reglement">
-             <!--<input type="checkbox" class="form-control" value="non" name="reglement"> non
-              -->
+            <p>
+             Oui: <input type="radio"  value="1" name="reglement">
+             Non: <input type="radio"  value="0" name="reglement" checked>
+           </p>
 
           </div>
 
@@ -53,7 +70,7 @@
               <label for="abonnement_id">Abonnement:</label>
               <select name="abonnement_id"  class="form-control" id="abonnement_id">
                @foreach($abonnements as $key => $value)
-                <option value="{{ $key }}"> {{ $value }} </option>
+                <option value="{{ $key }}"> {{ $key }} </option>
                @endforeach
               </select>
           </div>

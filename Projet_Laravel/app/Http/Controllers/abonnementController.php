@@ -40,17 +40,17 @@ class abonnementController extends Controller
      */
     public function store(Request $request)
     {
+      $zero = 0;
         $request->validate([
             'contrat'=>'required',
             'date'=>'required',
-            'cumulanc'=>'required',
             'cumulnouv'=>'required',
             'compteur_id'=>'required'
         ]);
             $abonnement = new Abonnement();
             $abonnement->contrat= $request->get('contrat');
             $abonnement->date= $request->get('date');
-            $abonnement->cumulanc= $request->get('cumulanc');
+            $abonnement->cumulanc= $zero;
             $abonnement->cumulnouv= $request->get('cumulnouv');
             $abonnement->compteur_id=  $request->get('compteur_id');
 
@@ -94,14 +94,13 @@ class abonnementController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'date'=>'required',
-            'cumulanc'=>'required',
+            'date'=>'required', 
             'cumulnouv'=>'required',
         ]);
 
         $abonnement = Abonnement::find($id);
         $abonnement->date= $request->date;
-        $abonnement->cumulanc = $request->cumulanc;
+        $abonnement->cumulanc = $abonnement->cumulnouv;
         $abonnement->cumulnouv = $request->cumulnouv;
         $abonnement->save();
 

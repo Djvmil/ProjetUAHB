@@ -1,3 +1,6 @@
+
+<?php
+use App\Abonnement; ?>
 @extends('layouts/layout1')
 @section('nom')
 <a href="#" class="navbar-brand">Enregistrement d'un Abonnement</a>
@@ -33,10 +36,10 @@
               <input type="date" class="form-control" name="date"/>
           </div>
 
-          <div class="form-group">
+          <!--div class="form-group">
               <label for="cumulanc">Cummul Ancien:</label>
               <input type="text" class="form-control" name="cumulanc"/>
-          </div>
+          </div-->
           <div class="form-group">
               <label for="cumulnouv">Cummul Nouveau:</label>
               <input type="text" class="form-control" name="cumulnouv"/>

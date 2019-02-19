@@ -1,3 +1,4 @@
+<?php use App\Abonnement; ?>
 @extends('layouts/layout1')
 @section('nom')
 <a href="#" class="navbar-brand">Facture</a>
@@ -25,12 +26,16 @@
     <tbody>
         @foreach($facture as $facture)
         <tr>
+
             <td>{{$facture->id}}</td>
             <td>{{$facture->mois}}</td>
-            <td>{{$facture->consommation}}</td>
-            <td>{{$facture->prix}}</td>
+            <?php $abonnement = Abonnement::find($facture->abonnement_id); 
+            $cons=$abonnement->cumulnouv-$abonnement->cumulanc;
+            $prix = $cons*100;?>
+            <td>{{$cons}}</td>
+            <td>{{$prix}}</td>
             <td>{{$facture->reglement}}</td>
-            <td>{{$facture->abonnement}}</td>
+            <td>{{$facture->abonnement_id}}</td>
             <td>
                 <a href="{{ route('facture.edit',$facture->id)}}" class="btn btn-primary">Modifier</a>
             </td>

@@ -31,12 +31,12 @@
                 <input type="date" class="form-control" name="date" value={{ $abonnement->date }} />
             </div>
 
-            <div class="form-group">
+            <!--div class="form-group">
                 <label for="cumulanc">Cummule Ancienne:</label>
                 <input type="text" class="form-control" name="cumulanc" value={{ $abonnement->cumulanc }} />
-            </div>
+            </div-->
             <div class="form-group">
-                <label for="cumulnouv">Cummule Nouvelle:</label>
+                <label for="cumulnouv">Cummule Nouveau:</label>
                 <input type="text" class="form-control" name="cumulnouv" value={{ $abonnement->cumulnouv }} />
             </div>
             <button type="submit" class="btn btn-primary">Modifier</button>

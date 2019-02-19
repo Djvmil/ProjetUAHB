@@ -106,7 +106,7 @@ http://www.tooplate.com/view/2083-steak-house
 			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
 				<div class="feature-thumb">
 					<div class="feature-icon">
-						 <span><i class="fa fa-cutlery"></i></span>
+						 <span></span>
 					</div>
 					<h3>Gestion Compteur</h3>
 					<p>Visualiser, Ajouter, Modifier ou supprimer un compteur.</p>
@@ -116,7 +116,7 @@ http://www.tooplate.com/view/2083-steak-house
 			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
 				<div class="feature-thumb">
 					<div class="feature-icon">
-						<span><i class="fa fa-flow"></i></span>
+						<span></span>
 					</div>
 					<h3>Gestion Abonnement</h3>
 					<p>Visualiser, Ajouter, Modifier ou supprimer un Abonnement.</p>
@@ -126,7 +126,7 @@ http://www.tooplate.com/view/2083-steak-house
 			<div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
 				<div class="feature-thumb">
 					<div class="feature-icon">
-						<span><i class="fa fa-bell-o"></i></span>
+						<span></span>
 					</div>
 					 <h3>Gestion Facture</h3>
 					 <p>Visualiser, Ajouter, Modifier ou supprimer une Facture.</p>

@@ -49,16 +49,16 @@ class factureController extends Controller
     {
         $request->validate([
             'mois'=>'required',
-            'consommation'=>'required',
-            'prix'=>'required',
             'reglement'=>'required',
             'abonnement_id'=>'required'
         ]);
+       $abonnement = Abonnement::find($request->get('abonnement_id'));
+        $prix = $abonnement->cumulnouv*100;
 
         $facture = new Facture();
         $facture->mois= $request->get('mois');
-        $facture->consommation= $request->get('consommation');
-        $facture->prix= $request->get('prix');
+        $facture->consommation= $abonnement->cumulnouv;
+        $facture->prix= $prix;
         $facture->reglement= $request->get('reglement');
         $facture->abonnement_id=  $request->get('abonnement_id');
        /* $facture = new Facture([
